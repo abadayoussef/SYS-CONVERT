@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Decimal To Octal</title>
 </head>
+
 <body>
-    <table style="width: 50%; margin: auto; background-color: aqua;">
-        <tr style="text-align: left;">
-            <th>Decimal</th>
-            <th>Binary</th>
-            <th>Octal</th>
-            <th>Hexadecimal</th>
-        </tr>
-        <tr>
-            <td><input type="text" id="decimal" placeholder="Enter your Decimal"></td>
-            <td><span id="binary" style="background-color: white;">Result...</span></td>
-            <td><span id="octal" style="background-color: white;">Result...</span></td>
-            <td><span id="hexadecimal" style="background-color: white;">Result...</span></td>
-        </tr>
-    </table>
-    <div style="text-align: center; margin: 10px;">
-        <button style="padding: 10px;" onclick="convert();">Convert</button>
+    <!--Decimal with or Without floating points to other systems-->
+    <div style="background-color: tomato; padding: 15px; margin: 15px; width: 70%; margin: 15px auto;">
+        <h2 style="text-align: center;">Decimal with or without Floating points to other systems</h2>
+        <table style="width: 100%; background-color: orange; margin: auto; padding: 16px;">
+            <tr style="text-align: left;">
+                <th>Decimal</th>
+                <th>Binary</th>
+                <th>Octal</th>
+                <th>Hexadecimal</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="decimal" placeholder="Enter your Decimal"></td>
+                <td><span id="decimalToBinary" style="background-color: white;">Result...</span></td>
+                <td><span id="decimalToOctal" style="background-color: white;">Result...</span></td>
+                <td><span id="decimalToHexadecimal" style="background-color: white;">Result...</span></td>
+            </tr>
+        </table>
+        <div style="text-align: center; margin: 10px;">
+            <button style="padding: 10px;" onclick="convertDecimal();">Convert Decimal</button>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
