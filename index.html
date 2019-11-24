@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Decimal To Octal</title>
+    <title>SYS-CONVERT.IO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!--Decimal with or Without floating points to other systems-->
-    <div style="background-color: tomato; padding: 15px; margin: 15px; width: 70%; margin: 15px auto;">
-        <h2 style="text-align: center;">Decimal with or without Floating points to other systems</h2>
-        <table style="width: 100%; background-color: orange; margin: auto; padding: 16px;">
-            <tr style="text-align: left;">
-                <th>Decimal</th>
-                <th>Binary</th>
-                <th>Octal</th>
-                <th>Hexadecimal</th>
-            </tr>
-            <tr>
-                <td><input type="text" id="decimal" placeholder="Enter your Decimal"></td>
-                <td><span id="decimalToBinary" style="background-color: white;">Result...</span></td>
-                <td><span id="decimalToOctal" style="background-color: white;">Result...</span></td>
-                <td><span id="decimalToHexadecimal" style="background-color: white;">Result...</span></td>
-            </tr>
-        </table>
-        <div style="text-align: center; margin: 10px;">
-            <button style="padding: 10px;" onclick="convertDecimal();">Convert Decimal</button>
+    <div class="logo">
+        <h1>SYS-CONVERT.IO</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <span>Enter your value:</span>
+            <input onkeyup="convert(event);" id="number" type="text" placeholder="Enter your number here...">
+            <span>From:</span>
+            <select id="from" onchange="convert(event);">
+                <option value="2">Binary</option>
+                <option value="8">Octal</option>
+                <option selected value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+              </select>
+            <span>To:</span>
+            <select id="to" onchange="convert(event);">
+                <option value="2">Binary</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+              </select>
+        </div>
+        <div class="result">
+            <span>Your Result Is: </span>
+            <span id="result">0</span>
         </div>
     </div>
     <script src="main.js"></script>
 </body>
-
 </html>
